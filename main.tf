@@ -17,7 +17,7 @@ provider "aws" {
 resource "aws_s3_bucket" "artifacts_bucket" {
   bucket = "${var.project_name}-pipeline-artifacts"
   acl    = "private"
-  # let terraform destroy delete non-empty bucket
+  # let terraform delete non-empty bucket
   force_destroy = true
 }
 
